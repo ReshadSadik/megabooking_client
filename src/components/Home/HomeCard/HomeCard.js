@@ -5,7 +5,6 @@ import './HomeCard.css';
 
 const HomeCard = (props) => {
   const destination = props.destination;
-  const handleDestination = props.handleDestination;
   const placeOrderUrl = `/placeorder/${destination._id}`;
   return (
     <div>
@@ -26,10 +25,7 @@ const HomeCard = (props) => {
               </div>
               <Link to={placeOrderUrl}>
                 <div className="cursor">
-                  <h2
-                    // onClick={() => handleDestination(destination._id)}
-                    className="homecard-btn  text-white fs-5 p-2 bg-success mt-5"
-                  >
+                  <h2 className="homecard-btn  text-white fs-5 p-2 bg-success mt-5">
                     Book Now
                   </h2>
                 </div>

@@ -1,7 +1,33 @@
-.toggle-checkbox:checked {
-  right: 0;
-  border-color: rgb(241, 131, 4);
+#customBtn {
+  display: inline-block;
+  background: white;
+  color: #444;
+  width: 250px;
+  border-radius: 5px;
+  border: thin solid #888;
+  box-shadow: 1px 1px 1px grey;
+  white-space: nowrap;
 }
-.toggle-checkbox:checked + .toggle-label {
-  background-color: rgb(241, 131, 4);
+#customBtn:hover {
+  cursor: pointer;
+}
+
+span.icon {
+  background: url('https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png')
+    transparent 5px 50% no-repeat;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  width: 42px;
+  height: 42px;
+}
+span.buttonText {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 42px;
+  padding-right: 42px;
+  font-size: 14px;
+  font-weight: bold;
+  /* Use the Roboto font that is loaded in the <head> */
+  font-family: 'Roboto', sans-serif;
 }

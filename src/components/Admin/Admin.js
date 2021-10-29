@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 const Admin = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    fetch('http://localhost:5000/destination', {
+    fetch('https://glacial-spire-98135.herokuapp.com/destination', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

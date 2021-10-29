@@ -14,29 +14,9 @@ import useAuth from '../../hooks/useAuth';
 const Home = () => {
   const { users } = useAuth();
   const [destinations, setDestinations] = useState([]);
-  const handleDestination = (id) => {
-    const userInfo = {
-      email: users.email,
-      destinationId: id,
-    };
-
-    fetch(`http://localhost:5000/newdestination`, {
-      method: 'PUT',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify(userInfo),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data) {
-          alert('destination added successfully');
-        }
-      });
-  };
 
   useEffect(() => {
-    fetch('http://localhost:5000/destinations')
+    fetch('https://glacial-spire-98135.herokuapp.com/destinations')
       .then((res) => res.json())
       .then((data) => setDestinations(data));
   }, []);
@@ -59,11 +39,7 @@ const Home = () => {
       </div>
       <div className="home-events d-flex justify-content-center container  flex-wrap">
         {destinations.map((destination) => (
-          <HomeCard
-            handleDestination={handleDestination}
-            key={destination._id}
-            destination={destination}
-          ></HomeCard>
+          <HomeCard key={destination._id} destination={destination}></HomeCard>
         ))}
       </div>
     </div>

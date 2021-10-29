@@ -3,33 +3,30 @@ import './EventCard.css';
 
 const EventCard = (props) => {
   const destination = props.destination;
+  const handleUserDelete = props.handleUserDelete;
   console.log(destination);
 
   return (
-    <div>
-      <div style={{ width: '300px' }}>
+    <div className="p-2 bg-danger m-2 d-flex justify-content-center align-items-center">
+      <div style={{ width: '600px' }}>
         <div className=" mx-auto container">
           <div className="col-xs-12 col-sm-12">
             <div
-              className="card"
+              className="event-card"
               style={{
                 backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${destination.img})`,
               }}
             >
-              {/* <div className="card-category">{destination.destination}</div> */}
               <div className="card-description">
                 <h2 className="fs-2">{destination.destination}</h2>
                 <p>{destination.description}</p>
               </div>
-              {/* <img
-                className="card-user avatar avatar-large"
-                src="https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true"
-              /> */}
-              {/* <a className="card-link" href="/"></a> */}
             </div>
           </div>
         </div>
       </div>
+      <h2>hi</h2>
+      <button onClick={() => handleUserDelete(destination._id)}>X</button>
     </div>
   );
 };
