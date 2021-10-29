@@ -3,11 +3,11 @@ import {} from 'react-bootstrap';
 import Header from './shared/Header/Header';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './components/Home/Home';
-import Donations from './components/Donations/Donations';
-import Events from './components/Events/Events';
 import Login from './authentication/Login/Login';
 import Admin from './components/Admin/Admin';
 import AuthProvider from './context/AuthProvider';
+import UserDestinations from './components/Events/UserDestinations';
+import PlaceOrder from './components/PlaceOrder/PlaceOrder';
 
 function App() {
   return (
@@ -21,11 +21,12 @@ function App() {
             <Route exact path="/">
               <Home></Home>
             </Route>
-            <Route exact path="/donations">
-              <Donations></Donations>
-            </Route>
+
             <Route exact path="/bookings">
-              <Events></Events>
+              <UserDestinations></UserDestinations>
+            </Route>
+            <Route exact path="/placeorder/:placeOrderId">
+              <PlaceOrder></PlaceOrder>
             </Route>
 
             <Route path="/login">

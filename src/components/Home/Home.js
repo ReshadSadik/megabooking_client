@@ -1,8 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Header from '../../shared/Header/Header';
-import Donations from '../Donations/Donations';
-import Events from '../Events/Events';
 import HomeCard from './HomeCard/HomeCard';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';

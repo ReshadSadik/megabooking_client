@@ -6,7 +6,7 @@ import Header from '../../shared/Header/Header';
 import HomeCard from '../Home/HomeCard/HomeCard';
 import EventCard from './EventCard/EventCard';
 
-const Events = () => {
+const UserDestinations = () => {
   const { users } = useAuth();
   const [userDestinations, setUserDestinations] = useState([]);
   // const [isTrue, setIsTrue] = useState(1);
@@ -36,4 +36,4 @@ const Events = () => {
   );
 };
 
-export default Events;
+export default UserDestinations;

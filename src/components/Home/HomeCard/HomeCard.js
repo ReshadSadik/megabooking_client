@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './HomeCard.css';
 
 const HomeCard = (props) => {
   const destination = props.destination;
   const handleDestination = props.handleDestination;
+  const placeOrderUrl = `/placeorder/${destination._id}`;
   return (
     <div>
       <div style={{ width: '300px' }}>
@@ -22,14 +24,16 @@ const HomeCard = (props) => {
               <div className="card-description mb-3">
                 <p className="fw-bold  ms-auto">{destination.description}</p>
               </div>
-              <div className="cursor">
-                <h2
-                  onClick={() => handleDestination(destination._id)}
-                  className="homecard-btn fs-5 p-2 bg-success mt-5"
-                >
-                  Book Now
-                </h2>
-              </div>
+              <Link to={placeOrderUrl}>
+                <div className="cursor">
+                  <h2
+                    // onClick={() => handleDestination(destination._id)}
+                    className="homecard-btn  text-white fs-5 p-2 bg-success mt-5"
+                  >
+                    Book Now
+                  </h2>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
