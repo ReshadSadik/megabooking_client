@@ -39,12 +39,13 @@ function App() {
               <Login></Login>
             </Route>
 
-            <Route path="">
-              <NotFound></NotFound>
-            </Route>
             <PrivateRoute exact path="/admin">
               <Admin></Admin>
             </PrivateRoute>
+
+            <Route path="">
+              <NotFound></NotFound>
+            </Route>
           </Switch>
         </BrowserRouter>
       </AuthProvider>
