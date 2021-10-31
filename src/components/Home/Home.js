@@ -17,12 +17,19 @@ const Home = () => {
   useEffect(() => {
     fetch('https://glacial-spire-98135.herokuapp.com/destinations')
       .then((res) => res.json())
+
       .then((data) => setDestinations(data));
   }, []);
   return (
     <div>
       <Header></Header>
       <Banner></Banner>
+
+      {!destinations.length && (
+        <div class="spinner-border mt-5" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      )}
 
       <div className="home-events mt-5 d-flex justify-content-center container  flex-wrap">
         {destinations.map((destination) => (

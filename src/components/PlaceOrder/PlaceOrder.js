@@ -16,6 +16,8 @@ const PlaceOrder = () => {
     const userInfo = {
       email: users.email,
       fullName: users.displayName,
+      photoURL: users.photoURL,
+      status: 'pending',
       destinationId: placeOrderId,
       userData: data,
     };

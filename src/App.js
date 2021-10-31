@@ -24,12 +24,12 @@ function App() {
               <Home></Home>
             </Route>
 
-            <Route exact path="/bookings">
+            <PrivateRoute exact path="/bookings">
               <UserDestinations></UserDestinations>
-            </Route>
-            <Route exact path="/manageBookings">
+            </PrivateRoute>
+            <PrivateRoute exact path="/manageBookings">
               <ManageBooking></ManageBooking>
-            </Route>
+            </PrivateRoute>
             <PrivateRoute exact path="/placeorder/:placeOrderId">
               <PlaceOrder></PlaceOrder>
             </PrivateRoute>
@@ -37,9 +37,9 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path="/admin">
+            <PrivateRoute path="/admin">
               <Admin></Admin>
-            </Route>
+            </PrivateRoute>
           </Switch>
         </BrowserRouter>
       </AuthProvider>

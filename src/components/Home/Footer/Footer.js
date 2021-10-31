@@ -11,7 +11,7 @@ const Footer = () => {
                 <div class="col-md-2">
                   <h6 class="text-uppercase font-weight-bold">
                     <a href="#!" class="text-white">
-                      About us
+                      Home
                     </a>
                   </h6>
                 </div>
@@ -19,7 +19,7 @@ const Footer = () => {
                 <div class="col-md-2">
                   <h6 class="text-uppercase font-weight-bold">
                     <a href="#!" class="text-white">
-                      Products
+                      About Us
                     </a>
                   </h6>
                 </div>
@@ -27,7 +27,7 @@ const Footer = () => {
                 <div class="col-md-2">
                   <h6 class="text-uppercase font-weight-bold">
                     <a href="#!" class="text-white">
-                      Awards
+                      Orders
                     </a>
                   </h6>
                 </div>

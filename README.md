@@ -2,7 +2,7 @@
 
 Getting started is easy. You can easily choose a destination, make a plan and you are set to go. We will need your information and confirm you asap!
 
-Live site to the website [MegaBooking](https://fiitlab.netlify.app/)
+Live site to the website [MegaBooking](https://modest-jones-5ee8df.netlify.app/)
 
 - This is a website to book a ticket to your desired destination!
 - It has login authentication

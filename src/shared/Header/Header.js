@@ -19,7 +19,7 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link className="fw-bold" as={Link} to="/home">
+              <Nav.Link className="fw-bold fs-5" as={Link} to="/home">
                 Home
               </Nav.Link>
 
@@ -29,16 +29,20 @@ const Header = () => {
                 </Link>
               ) : (
                 <div className="d-xl-flex d-block align-items-center">
-                  <Nav.Link className="fw-bold" as={Link} to="/bookings">
+                  <Nav.Link className="fw-bold fs-5" as={Link} to="/bookings">
                     My Bookings
                   </Nav.Link>
-                  <Nav.Link className="fw-bold" as={Link} to="/manageBookings">
+                  <Nav.Link
+                    className="fw-bold fs-5"
+                    as={Link}
+                    to="/manageBookings"
+                  >
                     Manage Bookings
                   </Nav.Link>
-                  <Nav.Link className="fw-bold" as={Link} to="/admin">
+                  <Nav.Link className="fw-bold fs-5" as={Link} to="/admin">
                     Add New Destination
                   </Nav.Link>
-                  <h2 className="fs-5 m-0 mx-2 my-xl-0 my-2 border border-2 p-2 border-success">
+                  <h2 className="fs-5 m-0 mx-2 my-xl-0 my-2 border border-2 p-2 border-success rounded">
                     {users.displayName}
                   </h2>
                   <Button variant="danger" onClick={signOutUser}>
