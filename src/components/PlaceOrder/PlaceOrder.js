@@ -20,7 +20,7 @@ const PlaceOrder = () => {
       userData: data,
     };
 
-    fetch(`http://localhost:5000/newdestination`, {
+    fetch(`https://glacial-spire-98135.herokuapp.com/newdestination`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

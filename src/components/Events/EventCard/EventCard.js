@@ -12,7 +12,9 @@ const EventCard = (props) => {
   console.log(destination);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/events/${destination.destinationId}`)
+    fetch(
+      `https://glacial-spire-98135.herokuapp.com/events/${destination.destinationId}`
+    )
       .then((res) => res.json())
       .then((data) => setDestinations(data));
   }, []);

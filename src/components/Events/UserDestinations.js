@@ -16,7 +16,7 @@ const UserDestinations = () => {
     if (result) {
       //Logic to delete the item
 
-      fetch(`http://localhost:5000/userDestination/${id}`, {
+      fetch(`https://glacial-spire-98135.herokuapp.com/userDestination/${id}`, {
         method: 'DELETE',
       })
         .then((res) => res.json())
@@ -27,7 +27,9 @@ const UserDestinations = () => {
     }
   };
   useEffect(() => {
-    fetch(`http://localhost:5000/user/destinations/${users.email}`)
+    fetch(
+      `https://glacial-spire-98135.herokuapp.com/user/destinations/${users.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setUserDestinations(data);
