@@ -10,6 +10,7 @@ import UserDestinations from './components/Events/UserDestinations';
 import PlaceOrder from './components/PlaceOrder/PlaceOrder';
 import ManageBooking from './components/ManageBooking/ManageBooking';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -34,10 +35,14 @@ function App() {
               <PlaceOrder></PlaceOrder>
             </PrivateRoute>
 
-            <Route path="/login">
+            <Route exact path="/login">
               <Login></Login>
             </Route>
-            <PrivateRoute path="/admin">
+
+            <Route path="">
+              <NotFound></NotFound>
+            </Route>
+            <PrivateRoute exact path="/admin">
               <Admin></Admin>
             </PrivateRoute>
           </Switch>
