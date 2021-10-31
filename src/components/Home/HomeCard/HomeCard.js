@@ -34,7 +34,6 @@ const HomeCard = (props) => {
           </div>
         </div>
       </div>
-      ;
     </div>
   );
 };

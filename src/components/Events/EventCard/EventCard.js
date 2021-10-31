@@ -1,32 +1,62 @@
 import React from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import useAuth from '../../../hooks/useAuth';
 import './EventCard.css';
 
 const EventCard = (props) => {
+  const { users } = useAuth();
   const destination = props.destination;
   const handleUserDelete = props.handleUserDelete;
+  const [destinations, setDestinations] = useState({});
   console.log(destination);
 
+  useEffect(() => {
+    fetch(`http://localhost:5000/events/${destination.destinationId}`)
+      .then((res) => res.json())
+      .then((data) => setDestinations(data));
+  }, []);
+
   return (
-    <div className="p-2 bg-danger m-2 d-flex justify-content-center align-items-center">
-      <div style={{ width: '600px' }}>
+    <div className="p-2 border border-5 m-2 rounded  ">
+      <div>
         <div className=" mx-auto container">
-          <div className="col-xs-12 col-sm-12">
+          <div className="row d-flex align-items-center ">
+            <div className="col-xl-3 col-12 d-flex align-items-center">
+              <img
+                className="rounded-circle w-25"
+                src={users.photoURL}
+                alt=""
+              />
+              <div>
+                <h4>{users.displayName}</h4>
+                <p className="m-0">{users.email}</p>
+              </div>
+            </div>
             <div
-              className="event-card"
+              className="col-xl-6 col-12 py-3 rounded"
               style={{
-                backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${destination.img})`,
+                backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${destinations.img})`,
               }}
             >
-              <div className="card-description">
-                <h2 className="fs-2">{destination.destination}</h2>
-                <p>{destination.description}</p>
+              <div className="">
+                <h2 className="fs-2 text-white m-0">
+                  {destinations.destination}
+                </h2>
+                <p className="text-white m-0">{destinations.description}</p>
               </div>
+            </div>
+            <div className="col-xl-3 col-12 ">
+              <button
+                className="rounded bg-danger text-white border-0 fw-bold p-2"
+                onClick={() => handleUserDelete(destination._id)}
+              >
+                X
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <h2>hi</h2>
-      <button onClick={() => handleUserDelete(destination._id)}>X</button>
     </div>
   );
 };

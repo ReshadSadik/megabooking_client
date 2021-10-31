@@ -8,6 +8,8 @@ import Admin from './components/Admin/Admin';
 import AuthProvider from './context/AuthProvider';
 import UserDestinations from './components/Events/UserDestinations';
 import PlaceOrder from './components/PlaceOrder/PlaceOrder';
+import ManageBooking from './components/ManageBooking/ManageBooking';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -25,9 +27,12 @@ function App() {
             <Route exact path="/bookings">
               <UserDestinations></UserDestinations>
             </Route>
-            <Route exact path="/placeorder/:placeOrderId">
-              <PlaceOrder></PlaceOrder>
+            <Route exact path="/manageBookings">
+              <ManageBooking></ManageBooking>
             </Route>
+            <PrivateRoute exact path="/placeorder/:placeOrderId">
+              <PlaceOrder></PlaceOrder>
+            </PrivateRoute>
 
             <Route path="/login">
               <Login></Login>
