@@ -25,7 +25,7 @@ const Header = () => {
 
               {!users.email ? (
                 <Link to="/login">
-                  <Button variant="primary">Log In</Button>{' '}
+                  <Button variant="primary mt-1">Log In</Button>{' '}
                 </Link>
               ) : (
                 <div className="d-xl-flex d-block align-items-center">
