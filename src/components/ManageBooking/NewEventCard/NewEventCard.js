@@ -43,7 +43,7 @@ const NewEventCard = (props) => {
               />
               <div>
                 <h4>{destination.fullName}</h4>
-                <p className="m-0">{destination.email}</p>
+                <p className="my-xl-0 my-3">{destination.email}</p>
               </div>
             </div>
             <div
@@ -59,17 +59,17 @@ const NewEventCard = (props) => {
                 <p className="text-white m-0">{destinations.description}</p>
               </div>
             </div>
-            <div className="col-xl-3 col-12 d-flex  align-items-center ">
+            <div className="col-xl-3 col-12 d-flex  align-items-center justify-content-center ">
               <button
                 onClick={() => {
                   handlePending(destination._id);
                 }}
-                className="border cursor-pointer ms-3 m-0 border-2 bg-success text-white border-success rounded px-3 py-1"
+                className="border cursor-pointer ms-3 m-0 border-2 bg-success text-white border-success rounded px-3 py-1 my-2"
               >
                 {destination.status}
               </button>
               <button
-                className="rounded bg-danger text-white border-0 fw-bold p-2 mx-5"
+                className="rounded bg-danger text-white border-0 fw-bold px-4 px-xl-2 mt-2 mt-xl-0 mx-5"
                 onClick={() => handleUserDelete(destination._id)}
               >
                 X

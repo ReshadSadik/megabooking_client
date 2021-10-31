@@ -32,7 +32,7 @@ const EventCard = (props) => {
               />
               <div>
                 <h4>{users.displayName}</h4>
-                <p className="m-0">{users.email}</p>
+                <p className="my-xl-0 my-3 ">{users.email}</p>
               </div>
             </div>
             <div
@@ -50,7 +50,7 @@ const EventCard = (props) => {
             </div>
             <div className="col-xl-3 col-12 ">
               <button
-                className="rounded bg-danger text-white border-0 fw-bold p-2"
+                className="rounded bg-danger text-white border-0 fw-bold px-4 px-xl-2 mt-2 mt-xl-0"
                 onClick={() => handleUserDelete(destination._id)}
               >
                 X

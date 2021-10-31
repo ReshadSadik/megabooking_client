@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './Login.css';
 
@@ -31,6 +31,12 @@ const Login = () => {
           </div>
         </div>
         <div id="name"></div>
+        <Link to="/home">
+          <button className="bg-danger border-0 text-white fw-bold rounded mx-4 ">
+            {' '}
+            X{' '}
+          </button>
+        </Link>
       </div>
     </div>
   );
