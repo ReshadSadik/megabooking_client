@@ -75,6 +75,7 @@ const NewEventCard = (props) => {
                 X
               </button>
             </div>
+            <div></div>
           </div>
         </div>
       </div>
